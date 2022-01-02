@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %} hola amigos de | Community {% endblock %}
+
+{% block link %}
+        <link rel="stylesheet" href=" {% static 'css/button.css' %} ">
+{% endblock %}
+
+
+{% block content %}
+
+<div class="container col mb-4">
+    {% include "slider.html" %}
+    <div class="row justify-content-center align-items-center gap-3">
+        <div class="col-10 col-sm-5 col-md-5 col-lg-3 p-0">
+            <a class="text-decoration-none" href="groups">
+                <div color="#4E342E" class="fs-5 sc-13vwexf-0 iSXWKJ">
+                    <i class="bi bi-link me-2"></i>
+                    Enlaces
+                </div>
+            </a>
+        </div>
+        <div class="col-10 col-sm-5 col-md-5 col-lg-3 p-0">
+            <a class="text-decoration-none" href="{% url 'cursos' %}">
+                <div color="#00CC88" class="fs-5 sc-13vwexf-0 fVpbFI">
+                    <i class="bi bi-book me-2"></i>
+                    Cursos
+                </div>
+            </a>
+        </div>
+        <div class="col-10 col-sm-5 col-md-5 col-lg-3 p-0">
+            <a class="text-decoration-none" href="{% url 'api' %}">
+                <div color="#3F51B5" class="fs-5 sc-13vwexf-0 jGmZdx">
+                    <i class="bi bi-laptop me-2"></i>
+                    Apis
+                </div>
+            </a>
+        </div>
+        <div class="col-10 col-sm-5 col-md-5 col-lg-3 p-0">
+            <a class="text-decoration-none" href="{% url 'book' %}">
+                <div color="#b71c1c" class="fs-5 sc-13vwexf-0 GOjup">
+                    <i class="bi bi-book me-2"></i>
+                    Libros
+                </div>
+            </a>
+        </div>
+        <div class="col-10 col-sm-5 col-md-5 col-lg-3 p-0">
+            <a class="text-decoration-none" href="{% url 'games' %}">
+                <div color="#FFD54F" class="fs-5 sc-13vwexf-0 bMFJxi">
+                    <i class="bi bi-controller me-2"></i>
+                    Juegos
+                </div>
+            </a>
+        </div>
+        <div class="col-10 col-sm-5 col-md-5 col-lg-3 p-0">
+            <a class="text-decoration-none" href="{% url 'ingles' %}">
+                <div color="#F9A70C" class="fs-5 sc-13vwexf-0 KkMXr">
+                    <i class="bi bi-translate me-2"></i>
+                    Inglés
+                </div>
+            </a>
+        </div>
+        <div class="col-10 col-sm-5 col-md-5 col-lg-3 p-0">
+            <a class="text-decoration-none" href="{% url 'editor' %}">
+                <div color="#9E9E9E" class="fs-5 sc-13vwexf-0 hLjWgB">
+                    <i class="bi bi-camera-video me-2"></i>
+                    IDE-Editor
+                </div>
+            </a>
+        </div>
+        <div class="col-10 col-sm-5 col-md-5 col-lg-3 p-0">
+            <a class="text-decoration-none" href="{% url 'retos' %}">
+                <div color="#009688" class="fs-5 sc-13vwexf-0 cbgFjS">
+                    <i class="bi bi-music-note me-2"></i>
+                    Retos
+                </div>
+            </a>
+        </div>
+        <div class="col-10 col-sm-5 col-md-5 col-lg-3 p-0">
+            <a class="text-decoration-none" href="{% url 'typing' %}">
+                <div color="#b71c1c" class="fs-5 sc-13vwexf-0 GOjup">
+                    <i class="bi bi-book me-2"></i>
+                    Mecanografia
+                </div>
+            </a>
+        </div>
+        <div class="col-10 col-sm-5 col-md-5 col-lg-3 p-0">
+            <a class="text-decoration-none" href="{% url 'framework' %}">
+                <div color="#F9A70C" class="fs-5 sc-13vwexf-0 KkMXr">
+                    <i class="bi bi-translate me-2"></i>
+                    Framework
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
