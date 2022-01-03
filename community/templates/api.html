@@ -3,7 +3,7 @@
 
 {% block content %}
     <div class="container-sm">
-        <div class="row row-cols-1 row-cols-md-2 g-4 p-5">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-4 p-5">
             {% for c in api %}
                 <div class="col-md-4 col-lg-4 d-flex align-items-stretch">
                     <div class="card mb-3" style="max-width: 540px;">
@@ -12,7 +12,6 @@
                             <img src="{{c.image}}" class="card-img" alt="{{c.name}}">
                         </div>
                             <div class="col-md-8">
-{#                                <div class="card-body">#}
                                 <div class="card-body">
                                     <h5 class="card-title">{{c.name|slice:":10"}}</h5>
                                     <p class="card-text">{{ c.description|slice:":70" }}.</p>
@@ -21,7 +20,6 @@
                                             <a class="btn btn-primary" type="button" href="{{c.url}}" target="_blank"> Ir al canal</a>
                                         </div>
                                     </div>
-
                                 </div>
                             </div>
                         </div>
