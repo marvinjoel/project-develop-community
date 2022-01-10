@@ -1,7 +1,7 @@
 from django.contrib import admin
 
 from community.models import GamesLink, Link_Group, Community_info, InglesLink, APILink, EditorLink, CursosLink, \
-    RetosLink, LibrosLink, MecanografiaLink, FrameworkCssLink
+    RetosLink, LibrosLink, MecanografiaLink, FrameworkCssLink, TiktokLink
 
 
 @admin.register(Community_info)
@@ -55,5 +55,10 @@ class LinkLibrosAdmin(admin.ModelAdmin):
 
 @admin.register(FrameworkCssLink)
 class LinkFrameworkCssAdmin(admin.ModelAdmin):
+    list_display = ['url', 'name', 'created']
+    readonly_fields = ('name', 'description', 'image', 'created')
+
+@admin.register(TiktokLink)
+class LinkTiktokAdmin(admin.ModelAdmin):
     list_display = ['url', 'name', 'created']
     readonly_fields = ('name', 'description', 'image', 'created')

@@ -1,7 +1,7 @@
 from re import template
 from django.views.generic import TemplateView
 from community.models import Community_info, Link_Group, GamesLink, InglesLink, APILink, EditorLink, CursosLink, \
-    RetosLink, LibrosLink, MecanografiaLink, FrameworkCssLink
+    RetosLink, LibrosLink, MecanografiaLink, FrameworkCssLink, TiktokLink
 
 
 class PortadaView(TemplateView):
@@ -92,6 +92,14 @@ class LinksFrameworkCssView(TemplateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['framework'] = FrameworkCssLink.objects.all()
+        return context
+
+class LinksTiktokView(TemplateView):
+    template_name = 'tiktok.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['tiktok'] = TiktokLink.objects.all()
         return context
 
 
