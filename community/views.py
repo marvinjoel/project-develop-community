@@ -13,6 +13,7 @@ class PortadaView(TemplateView):
         context['comment'] = Community_info.objects.all()
         return context
 
+
 class GamesLinkView(TemplateView):
     template_name = 'games.html'
 
