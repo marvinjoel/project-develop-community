@@ -1,7 +1,7 @@
 from django.urls import path
 
 from community.views import PortadaView, LinksGroupView, GamesLinkView, LinksInglesView, LinksApiView, LinksEditorView, \
-    LinksCursosView, LinksRetosView, LinksLibrosView, LinksMecanogarfiaView, LinksFrameworkCssView
+    LinksCursosView, LinksRetosView, LinksLibrosView, LinksMecanogarfiaView, LinksFrameworkCssView, LinksTiktokView
 
 urlpatterns = [
     path('', PortadaView.as_view(), name="home"),
@@ -15,5 +15,6 @@ urlpatterns = [
     path('book/', LinksLibrosView.as_view(), name="book"),
     path('typing/', LinksMecanogarfiaView.as_view(), name="typing"),
     path('framework/', LinksFrameworkCssView.as_view(), name="framework"),
+    path('tiktok/', LinksTiktokView.as_view(), name="tiktok"),
 
 ]
