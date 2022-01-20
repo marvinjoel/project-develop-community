@@ -257,3 +257,23 @@ class TiktokLink(models.Model):
         self.image = url_data.get('image', None)
 
         super(TiktokLink, self).save()
+
+class YouTubeLink(models.Model):
+    url = models.URLField('youtube url',max_length=250,unique=True,blank=False,null=False)
+    name = models.CharField('youtube name', max_length=150, blank=True, null=True)
+    description = models.TextField('youtube description', blank=True, null=True, max_length=250)
+    image = models.CharField('youtube image', max_length=200, blank=True, null=True)
+    created = models.DateTimeField('date created', auto_now_add=True, blank=True)
+
+    def __str__(self):
+        return self.name
+
+    def save(self):
+        link_data = LinkData(self.url)
+        url_data = link_data.get_data()
+
+        self.name = url_data.get('name', None)
+        self.description = url_data.get('description', None)
+        self.image = url_data.get('image', None)
+
+        super(YouTubeLink, self).save()
