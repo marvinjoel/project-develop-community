@@ -1,7 +1,7 @@
 from re import template
 from django.views.generic import TemplateView
 from community.models import Community_info, Link_Group, GamesLink, InglesLink, APILink, EditorLink, CursosLink, \
-    RetosLink, LibrosLink, MecanografiaLink, FrameworkCssLink, TiktokLink
+    RetosLink, LibrosLink, MecanografiaLink, FrameworkCssLink, TiktokLink, YouTubeLink
 
 
 class PortadaView(TemplateView):
@@ -100,6 +100,14 @@ class LinksTiktokView(TemplateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['tiktok'] = TiktokLink.objects.all()
+        return context
+
+class LinksYouTubeView(TemplateView):
+    template_name = 'youtube.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['youtube'] = YouTubeLink.objects.all()
         return context
 
 
