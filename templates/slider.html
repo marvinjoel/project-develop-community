@@ -5,22 +5,17 @@
     <div class="flexslider">
 		<ul class="slides p-0">
 			<li>
-				<img src="{% static 'img/4.jpg' %}" alt="">
-				<section class="caption">
-					<h2></h2>
-				</section>
+                <picture>
+                    <source media="(max-width: 320px)" type="image/svg+xml" srcset="{% static 'img/4.jpg' %}">
+                    <source media="(min-width: 360px)" type="image/webp" srcset="{% static 'img/4.jpg' %}">
+                    <img src="{% static 'img/4.jpg' %}" alt="">
+                </picture>
 			</li>
 			<li>
-				<img src="{% static 'img/7.jpg' %}" alt="">
-				<section class="caption">
-					<h2></h2>
-				</section>
+				<img src="{% static 'img/7.jpg' %}"  alt="">
 			</li>
 			<li>
 				<img src="{% static 'img/8.jpg' %}" alt="">
-				<section class="caption">
-					<h2></h2>
-				</section>
 			</li>
 		</ul>
 	</div>
